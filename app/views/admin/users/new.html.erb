@@ -1,0 +1,35 @@
+<div class="header">
+  <h1><%= t '.title_new' %></h1>
+</div>
+
+<div class="section">
+  <% semantic_form_for([:admin, @user]) do |f| %>
+
+    <% if @user.errors.any? %>
+      <div id="error_explanation">
+        <h2><%= pluralize(@user.errors.count, "error") %> <%= t '.msg_error'  %></h2>
+
+        <ul>
+          <% @user.errors.full_messages.each do |msg| %>
+            <li><%= msg %></li>
+          <% end %>
+        </ul>
+      </div>
+    <% end %>
+
+    <% f.inputs do %>
+      <%= f.input :name, :label => t('.lbl_name') %>
+      <%= f.input :password, :label => t('.lbl_password') %>
+      <%= f.input :password_confirmation, :label => t('.lbl_password_confirmation') %>
+      <%= f.input :email, :label=> t('.lbl_email') %>
+    <% end %>
+
+    <% f.buttons do %>
+      <%= f.commit_button %>
+    <% end %>
+
+  <% end %>
+
+  <%= link_to t('.lnk_back'), admin_users_path %>
+
+</div>

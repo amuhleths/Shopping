@@ -3,3 +3,12 @@
 
 en:
   hello: "Hello world"
+  admin:
+    users:
+      new:
+        title_new: "Nuevo Usuario"
+        lbl_name: "Nombre"
+        lbl_password: "Contraseña"
+        lbl_password_confirmation: "Confirmación de Contraseña"
+        lbl_email: "Email"
+        lnk_back: "Atras"      

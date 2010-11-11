@@ -1,0 +1,24 @@
+<% semantic_form_for([:admin, @user]) do |f| %>
+
+  <% if @user.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@user.errors.count, "error") %> <%= t '.msg_error'  %></h2>
+
+      <ul>
+        <% @user.errors.full_messages.each do |msg| %>
+          <li><%= msg %></li>
+        <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <% f.inputs do %>
+    <%= f.input :name, :label => t('.lbl_name') %>
+    <%= f.input :email, :label=> t('.lbl_email') %>
+  <% end %>
+
+  <% f.buttons do %>
+    <%= f.commit_button %>
+  <% end %>
+
+<% end %>

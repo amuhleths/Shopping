@@ -1,4 +1,15 @@
 ShopVirtual::Application.routes.draw do
+
+  namespace :admin do resources :users end
+
+  get "welcome/index"
+
+  devise_for :users
+
+  devise_for :user_shops
+
+  devise_for :admins
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 
@@ -48,7 +59,7 @@ ShopVirtual::Application.routes.draw do
 
   # You can have the root of your site routed with "root"
   # just remember to delete public/index.html.
-  # root :to => "welcome#index"
+  root :to => "welcome#index"
 
   # See how all your routes lay out with "rake routes"
 

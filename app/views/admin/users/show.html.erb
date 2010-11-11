@@ -1,0 +1,29 @@
+<div class="header">
+  <h1> <%= t '.title' %></h1>
+</div>
+
+<div class="section">
+
+  <div class="show">
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <b><%= t '.lbl_name' %></b>
+      <%= @user.name %>
+    </p>
+
+    <p>
+      <b><%= t '.lbl_email' %></b>
+      <%= @user.email %>
+    </p>
+    <p>
+      <b><%= t '.lbl_country' %></b>
+      <%= @user.country %>
+    </p>
+
+    <%= link_to t('.lnk_edit'), edit_admin_user_path(@user) %> |
+
+    <%= link_to t('.lnk_back'), admin_users_path %>
+  </div>
+</div>
+

@@ -1,0 +1,10 @@
+<div class="header">
+  <h1><%= t '.title' %></h1>
+</div>
+
+<div class="section">
+  <%= render 'form' %>
+
+  <%= link_to t('.lnk_show'), [:admin, @user] %> |
+  <%= link_to t('.lnk_back'), admin_users_path %>
+</div>

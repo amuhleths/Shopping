@@ -1,0 +1,79 @@
+<div class="header">
+  <ol>
+  <li class="button round"><h2><% link_to(new_admin_user_path) do %><span><%= t'.new_user' %></span><% end %></h2></li>
+  </ol>
+  <h1><%= t'.title' %></h1>
+</div>
+
+<div class="section">
+  <!-- buttons -->
+  <div class="options">
+    <ol class="fRight hList">
+      <li><a href="#" title="Search" class="input"><span><%= t '.lbl_search_filter' %></span></a></li>
+    </ol>
+  </div>
+  <!-- end buttons -->
+
+  <!-- form search/Find -->
+  <div id="search_form_div" class="blueBright padding borderBlue marginBottom none" >
+    <% form_tag request.path, :method=> 'get' do %>
+      <fieldset class="fRight">
+        <ol class="hList hButtons">
+          <li class="dottedRight">
+            <%= submit_tag t('.lbl_search') %>
+            <li ><a href="#" class="cross"><%= t '.lbl_close' %></a></li>
+          </li>
+        </ol>
+      </fieldset>
+      <fieldset class="fLeft">
+        <ol class="hList hForm">
+          <li>
+            <label for="search"> <%= t '.btn_search'  %> </label>
+            <%= text_field_tag :name, params[:name], :size => 15 %>
+          </li>
+        </ol>
+      </fieldset>
+    <% end %>
+    <div class="clearBoth"></div>
+  </div>
+  <!-- end form -->
+
+  <% if @users.empty? %>
+     <div class="unavailable padding half center centerTxt round">
+       <div class="icon"></div>
+       <p class="title"><%= t '.msg_no_elem' %></p>
+       <p><%= t '.msg_empty' %></p>
+     </div>
+  <% else %>
+    <table id="people-table" width="100%" cellpadding="0" cellspacing="0" class="tableList">
+      <thead>
+        <tr>
+          <th><%= t'.tbl_name' %></th>
+          <th><%= t'.tbl_email' %></th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        <% @users.each do |user| %>
+          <tr id="<%= user.id %>" class="cel row">
+            <td><%= link_to user.name, admin_user_path(user) %></td>
+            <td><%= user.email %></td>
+            <td>
+              <ul class="edition fRight hList">
+                <li> <%= link_to t('.lnk_edit'), edit_admin_user_path(user), :class => "edit" %></li>
+                <li><%= link_to t('.lnk_delete'), [:admin, user], :confirm => t('.lnk_confirm'), :method => :delete, :class => "delete" %></li>
+              </ul>
+            </td>
+          </tr>
+        <% end %>
+      </tbody>
+      <tfoot>
+        <tr>
+          <th colspan="11">
+            <%= will_paginate @users %>              
+          </th>
+        </tr>
+      </tfoot>
+    </table>
+  <% end %>
+</div>
