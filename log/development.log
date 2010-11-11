@@ -4743,3 +4743,36 @@ ActionController::RoutingError (No route matches "/fonts/dax-bold-webfont.ttf"):
   
 
 Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.8ms)
+
+
+Started GET "/admin/users/new" for 127.0.0.1 at Thu Nov 11 16:14:11 -0200 2010
+  Processing by Admin::UsersController#new as HTML
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_admin_users_new_html_erb___728459586__613042908_0 at /home/alvaro/projects/Shopping/app/views/admin/users/new.html.erb:20)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_admin_users_new_html_erb___728459586__613042908_0 at /home/alvaro/projects/Shopping/app/views/admin/users/new.html.erb:27)
+DEPRECATION WARNING: <% %> style block helpers are deprecated. Please use <%= %>. (called from _app_views_admin_users_new_html_erb___728459586__613042908_0 at /home/alvaro/projects/Shopping/app/views/admin/users/new.html.erb:6)
+Rendered admin/users/new.html.erb within layouts/admin (18.6ms)
+Completed 200 OK in 35ms (Views: 21.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/fonts/dax-bold-webfont.woff" for 127.0.0.1 at Thu Nov 11 16:14:20 -0200 2010
+
+ActionController::RoutingError (No route matches "/fonts/dax-bold-webfont.woff"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (1.1ms)
+
+
+Started GET "/fonts/dax-bold-webfont.woff" for 127.0.0.1 at Thu Nov 11 16:14:20 -0200 2010
+
+ActionController::RoutingError (No route matches "/fonts/dax-bold-webfont.woff"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
+
+
+Started GET "/fonts/dax-bold-webfont.ttf" for 127.0.0.1 at Thu Nov 11 16:14:20 -0200 2010
+
+ActionController::RoutingError (No route matches "/fonts/dax-bold-webfont.ttf"):
+  
+
+Rendered /usr/lib/ruby/gems/1.8/gems/actionpack-3.0.0/lib/action_dispatch/middleware/templates/rescues/routing_error.erb within rescues/layout (0.9ms)
