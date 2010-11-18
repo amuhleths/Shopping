@@ -8,6 +8,13 @@ gem 'rails', '3.0.0'
 gem 'sqlite3-ruby', :require => 'sqlite3'
 gem 'devise', :git => 'git://github.com/plataformatec/devise.git'
 gem 'formtastic', '~> 1.1.0'
+gem "will_paginate"
+gem 'has_scope'
+
+
+
+
+
 # Use unicorn as the web server
 # gem 'unicorn'
 

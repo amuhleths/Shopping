@@ -1,0 +1,118 @@
+  Processing by Admin::UserShopsController#index as HTML
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  [1m[35mUserShop Load (0.1ms)[0m  SELECT "user_shops".* FROM "user_shops" LIMIT 30 OFFSET 0
+Completed 200 OK in 8ms (Views: 4.8ms | ActiveRecord: 0.4ms)
+  Processing by Admin::UserShopsController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 16ms (Views: 12.2ms | ActiveRecord: 0.0ms)
+  Processing by Admin::UserShopsController#new as HTML
+Completed 200 OK in 10ms (Views: 5.2ms | ActiveRecord: 0.0ms)
+  Processing by Admin::UserShopsController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 15ms (Views: 11.3ms | ActiveRecord: 0.0ms)
+  Processing by Admin::UserShopsController#create as HTML
+  Parameters: {"user_shop"=>{"these"=>"params"}}
+Redirected to http://test.host/admin/user_shops/1015
+Completed 302 Found in 6ms
+  Processing by Admin::UserShopsController#create as HTML
+  Parameters: {"user_shop"=>{}}
+Redirected to http://test.host/admin/user_shops/1016
+Completed 302 Found in 4ms
+  Processing by Admin::UserShopsController#create as HTML
+  Parameters: {"user_shop"=>{"these"=>"params"}}
+Completed 200 OK in 7ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by Admin::UserShopsController#create as HTML
+  Parameters: {"user_shop"=>{}}
+Completed 200 OK in 4ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by Admin::UserShopsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admin/user_shops/1019
+Completed 302 Found in 6ms
+  Processing by Admin::UserShopsController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admin/user_shops/1020
+Completed 302 Found in 4ms
+  Processing by Admin::UserShopsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 1.2ms | ActiveRecord: 0.3ms)
+  Processing by Admin::UserShopsController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 5ms (Views: 2.6ms | ActiveRecord: 0.0ms)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by Admin::UserShopsController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admin/user_shops
+Completed 302 Found in 5ms
+  Processing by Admin::UsersController#index as HTML
+  [1m[36mUser Load (0.2ms)[0m  [1mSELECT "users".* FROM "users" LIMIT 30 OFFSET 0[0m
+Completed 200 OK in 6ms (Views: 3.0ms | ActiveRecord: 0.5ms)
+  Processing by Admin::UsersController#show as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 15ms (Views: 2.4ms | ActiveRecord: 0.0ms)
+  Processing by Admin::UsersController#new as HTML
+Completed 200 OK in 14ms (Views: 9.5ms | ActiveRecord: 0.0ms)
+  Processing by Admin::UsersController#edit as HTML
+  Parameters: {"id"=>"37"}
+Completed 200 OK in 120ms (Views: 116.2ms | ActiveRecord: 0.0ms)
+  Processing by Admin::UsersController#create as HTML
+  Parameters: {"user"=>{"these"=>"params"}}
+Redirected to http://test.host/admin/users/1028
+Completed 302 Found in 6ms
+  Processing by Admin::UsersController#create as HTML
+  Parameters: {"user"=>{}}
+Redirected to http://test.host/admin/users/1029
+Completed 302 Found in 4ms
+  Processing by Admin::UsersController#create as HTML
+  Parameters: {"user"=>{"these"=>"params"}}
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.0ms)
+  Processing by Admin::UsersController#create as HTML
+  Parameters: {"user"=>{}}
+Completed 200 OK in 6ms (Views: 2.3ms | ActiveRecord: 0.0ms)
+  [1m[35mSQL (0.3ms)[0m   SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+  Processing by Admin::UsersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admin/users/1032
+Completed 302 Found in 5ms
+  Processing by Admin::UsersController#update as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admin/users/1033
+Completed 302 Found in 4ms
+  Processing by Admin::UsersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 6ms (Views: 1.3ms | ActiveRecord: 0.3ms)
+  Processing by Admin::UsersController#update as HTML
+  Parameters: {"id"=>"1"}
+Completed 200 OK in 4ms (Views: 1.8ms | ActiveRecord: 0.0ms)
+  [1m[36mSQL (0.3ms)[0m  [1m SELECT name
+ FROM sqlite_master
+ WHERE type = 'table' AND NOT name = 'sqlite_sequence'
+[0m
+  Processing by Admin::UsersController#destroy as HTML
+  Parameters: {"id"=>"1"}
+Redirected to http://test.host/admin/users
+Completed 302 Found in 4ms
+  Processing by WelcomeController#index as HTML
+Completed 200 OK in 22ms (Views: 21.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/admin/users" for 127.0.0.1 at Thu Nov 18 01:02:57 -0200 2010
+  Processing by Admin::UsersController#index as HTML
+  [1m[35mUser Load (0.2ms)[0m  SELECT "users".* FROM "users" LIMIT 30 OFFSET 0
+Completed 200 OK in 37ms (Views: 35.2ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/admin/user_shops" for 127.0.0.1 at Thu Nov 18 01:02:57 -0200 2010
+  Processing by Admin::UserShopsController#index as HTML
+  [1m[36mUserShop Load (0.2ms)[0m  [1mSELECT "user_shops".* FROM "user_shops" LIMIT 30 OFFSET 0[0m
+Completed 200 OK in 8ms (Views: 6.8ms | ActiveRecord: 0.2ms)

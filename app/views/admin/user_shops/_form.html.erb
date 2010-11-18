@@ -1,10 +1,10 @@
-<%= form_for([:admin, @user]) do |f| %>
-  <% if @user.errors.any? %>
+<%= form_for([:admin, @user_shop]) do |f| %>
+  <% if @user_shop.errors.any? %>
     <div id="error_explanation">
-      <h2><%= pluralize(@user.errors.count, "error") %> prohibited this user from being saved:</h2>
+      <h2><%= pluralize(@user_shop.errors.count, "error") %> prohibited this shop user from being saved:</h2>
 
       <ul>
-      <% @user.errors.full_messages.each do |msg| %>
+      <% @user_shop.errors.full_messages.each do |msg| %>
         <li><%= msg %></li>
       <% end %>
       </ul>
@@ -28,6 +28,6 @@
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit "Create Shop User" %>
   </div>
 <% end %>

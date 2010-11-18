@@ -1,7 +1,7 @@
 <h2>Listing Public Users</h2>
 
 <div style="float:right">
-  <%= link_to 'New Public User', new_admin_user_path %>
+  <%= link_to 'New Shop User', new_admin_user_shop_path %>
 </div>
 
 <div class="section">
@@ -20,7 +20,7 @@
   </div>
   <!-- end form -->
   <br/>
-  <% if @users.empty? %>
+  <% if @user_shops.empty? %>
      <div class="unavailable padding half center centerTxt round">
        <div class="icon"></div>
        <p class="title"><%= t '.msg_no_elem' %></p>
@@ -36,13 +36,13 @@
         </tr>
       </thead>
       <tbody>
-        <% @users.each do |user| %>
+        <% @user_shops.each do |user| %>
           <tr id="<%= user.id %>" class="cel row">
-            <td><%= link_to user.name, admin_user_path(user) %></td>
+            <td><%= link_to user.name, admin_user_shop_path(user) %></td>
             <td><%= user.email %></td>
             <td>
               <ul class="edition fRight hList">
-                <li> <%= link_to t('.lnk_edit'), edit_admin_user_path(user), :class => "edit" %></li>
+                <li> <%= link_to t('.lnk_edit'), edit_admin_user_shop_path(user), :class => "edit" %></li>
                 <li><%= link_to t('.lnk_delete'), [:admin, user], :confirm => t('.lnk_confirm'), :method => :delete, :class => "delete" %></li>
               </ul>
             </td>
@@ -52,7 +52,7 @@
       <tfoot>
         <tr>
           <th colspan="11">
-            <%= will_paginate @users %>              
+            <%= will_paginate @user_shops %>              
           </th>
         </tr>
       </tfoot>
