@@ -1,14 +1,18 @@
+<div class="header">
+  <h1> <%= t '.title' %></h1>
+</div>
+
 <p id="notice"><%= notice %></p>
 
 <p>
-  <b>Name:</b>
+  <b><%= t('.lbl_name') %>:</b>
   <%= @user.name %>
 </p>
 
 <p>
-  <b>Email:</b>
+  <b><%= t('.lbl_email') %>:</b>
   <%= @user.email %>
 </p>
 
-<%= link_to 'Edit', edit_admin_user_path(@user) %> |
-<%= link_to 'Back', admin_users_path %>
+<%= link_to t('.lnk_edit'), edit_admin_user_path(@user) %> |
+<%= link_to t('.lnk_back'), admin_users_path %>

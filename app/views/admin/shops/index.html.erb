@@ -1,9 +1,5 @@
 <h2><%= t('.title') %></h2>
 
-<div style="float:right">
-  <%= link_to t('.new_user'), new_admin_user_path %>
-</div>
-
 <div class="section">
   <!-- form search/Find -->
   <div id="search_form_div" class="blueBright padding borderBlue marginBottom none" >
@@ -20,7 +16,7 @@
   </div>
   <!-- end form -->
   <br/>
-  <% if @users.empty? %>
+  <% if @shops.empty? %>
      <div class="unavailable padding half center centerTxt round">
        <div class="icon"></div>
        <p class="title"><%= t '.msg_no_elem' %></p>
@@ -30,19 +26,19 @@
       <thead>
         <tr>
           <th><%= t'.tbl_name' %></th>
-          <th><%= t'.tbl_email' %></th>
+          <th><%= t'.tbl_telephone' %></th>
           <th></th>
         </tr>
       </thead>
       <tbody>
-        <% @users.each do |user| %>
-          <tr id="<%= user.id %>" class="cel row">
-            <td><%= link_to user.name, admin_user_path(user) %></td>
-            <td><%= user.email %></td>
+        <% @shops.each do |shop| %>
+          <tr id="<%= shop.id %>" class="cel row">
+            <td><%= link_to shop.name, admin_shop_path(shop) %></td>
+            <td><%= shop.telephone %></td>
             <td>
               <ul class="edition fRight hList">
-                <li> <%= link_to t('.lnk_edit'), edit_admin_user_path(user), :class => "edit" %></li>
-                <li><%= link_to t('.lnk_delete'), [:admin, user], :confirm => t('.lnk_confirm'), :method => :delete, :class => "delete" %></li>
+                <li> <%= link_to t('.lnk_edit'), edit_admin_shop_path(shop), :class => "edit" %></li>
+                <li><%= link_to t('.lnk_delete'), [:admin, shop], :confirm => t('.lnk_confirm'), :method => :delete, :class => "delete" %></li>
               </ul>
             </td>
           </tr>
@@ -51,7 +47,7 @@
       <tfoot>
         <tr>
           <th colspan="11">
-            <%= will_paginate @users %>              
+            <%= will_paginate @shops %>              
           </th>
         </tr>
       </tfoot>

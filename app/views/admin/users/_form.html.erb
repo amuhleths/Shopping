@@ -12,22 +12,22 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br />
+    <%= f.label :name, t('.lbl_name') %><br />
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br />
+    <%= f.label :email , t('.lbl_email')%><br />
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br />
+    <%= f.label :password , t('.lbl_password')%><br />
     <%= f.password_field :password %>
   </div>
   <div class="field">
-    <%= f.label :password_confirmation %><br />
+    <%= f.label :password_confirmation, t('.lbl_password_confirmation') %><br />
     <%= f.password_field :password_confirmation %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= f.submit t('.btn_save') %>
   </div>
 <% end %>

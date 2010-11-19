@@ -1,5 +1,7 @@
 ShopVirtual::Application.routes.draw do
 
+  namespace :admin do resources :shops end
+
   namespace :admin do resources :user_shops end
 
   namespace :admin do resources :users end

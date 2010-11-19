@@ -1,6 +1,6 @@
-<h1>Editing Shop User</h1>
+<h1><%= t('.title') %></h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', [:admin, @user_shop] %> |
-<%= link_to 'Back', admin_user_shops_path %>
+<%= link_to t('.lnk_show'), [:admin, @user_shop] %> |
+<%= link_to t('.lnk_back'), admin_users_path %>

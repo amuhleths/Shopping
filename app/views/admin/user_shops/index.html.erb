@@ -1,7 +1,7 @@
-<h2>Listing Public Users</h2>
+<h2><%= t('.title') %></h2>
 
 <div style="float:right">
-  <%= link_to 'New Shop User', new_admin_user_shop_path %>
+  <%= link_to t('.new_user'), new_admin_user_shop_path %>
 </div>
 
 <div class="section">
@@ -10,9 +10,9 @@
     <% form_tag request.path, :method=> 'get' do %>
       <fieldset class="fLeft">
         <div>
-            <label for="search"> <%= t '.btn_search'  %> </label>
+            <label for="search"> <%= t '.lbl_search'  %> </label>
             <%= text_field_tag :name, params[:name], :size => 15 %>
-            <%= submit_tag t('.lbl_search') %>
+            <%= submit_tag t('.btn_search') %>
         </div>
       </fieldset>
     <% end %>
